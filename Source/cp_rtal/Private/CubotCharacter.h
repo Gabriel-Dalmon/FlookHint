@@ -36,5 +36,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = CubotCharacter)
 	virtual void ToggleLamp();
 
+	/*DECLARE_DYNAMIC_DELEGATE(FNoParamDelegate);
+
+	UFUNCTION(BlueprintCallable, meta = (AutoCreateRefTerm = "Delegate"))
+	void SubscribeToOnActivated(const FNoParamDelegate& Delegate);*/
+
 
 };
