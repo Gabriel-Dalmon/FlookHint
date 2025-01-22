@@ -4,12 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "HealthComponent.h"
 #include "CubotCharacter.generated.h"
 
 UCLASS()
 class ACubotCharacter : public ACharacter
 {
 	GENERATED_BODY()
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Health")
+	UHealthComponent* HealthComponent;
 
 public:
 	// Sets default values for this character's properties
@@ -35,11 +40,4 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = CubotCharacter)
 	virtual void ToggleLamp();
-
-	/*DECLARE_DYNAMIC_DELEGATE(FNoParamDelegate);
-
-	UFUNCTION(BlueprintCallable, meta = (AutoCreateRefTerm = "Delegate"))
-	void SubscribeToOnActivated(const FNoParamDelegate& Delegate);*/
-
-
 };
